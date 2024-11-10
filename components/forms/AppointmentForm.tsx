@@ -15,7 +15,7 @@ import { getAppointmentSchema } from "@/lib/validation"; // Ensure this comes be
 import { Appointment } from "@/types/appwrite.types"; // This should come after validation
 
 // Relative imports
-import CustomFormField from "../CustomFormField";
+import CustomFormField, { FormFieldType } from "../CustomFormField";
 import SubmitButton from "../SubmitButton"; // Ensure this comes before form
 import { Form } from "../ui/form"; // Form comes after SubmitButton
 
