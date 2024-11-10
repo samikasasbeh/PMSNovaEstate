@@ -7,19 +7,15 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-
-import CustomFormField, { FormFieldType } from "../CustomFormField";
-import SubmitButton from "../SubmitButton";
-import { Form } from "../ui/form";
-
+import { Appointment } from "@/types/appwrite.types"; // Move this import before relative imports
 import { SelectItem } from "@/components/ui/select";
 import { Doctors } from "@/constants";
-import {
-  createAppointment,
-  updateAppointment,
-} from "@/lib/actions/appointment.actions";
+import { createAppointment, updateAppointment } from "@/lib/actions/appointment.actions";
 import { getAppointmentSchema } from "@/lib/validation";
-import { Appointment } from "@/types/appwrite.types";
+
+import { Form } from "../ui/form"; // Move after absolute imports
+import CustomFormField from "../CustomFormField"; // Move after absolute imports
+import SubmitButton from "../SubmitButton"; // Move after absolute imports
 
 import "react-datepicker/dist/react-datepicker.css";
 

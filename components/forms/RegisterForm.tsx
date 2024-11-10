@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -15,16 +17,15 @@ import { Form, FormControl } from "@/components/ui/form";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SelectItem } from "@/components/ui/select";
+
 import {
   Doctors,
   GenderOptions,
   IdentificationTypes,
   PatientFormDefaultValues,
-} from "@/constants";
-import { registerPatient } from "@/lib/actions/patient.actions";
+} from "@/constants"; // Move this import above the next one
+import { registerPatient } from "@/lib/actions/patient.actions"; // Place after "@/constants"
 import { PatientFormValidation } from "@/lib/validation";
-
-
 
 import "react-datepicker/dist/react-datepicker.css";
 import "react-phone-number-input/style.css";

@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import { AppointmentForm } from "./forms/AppointmentForm";
-
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,8 +11,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Appointment } from "@/types/appwrite.types";
+import { Appointment } from "@/types/appwrite.types"; // Place this absolute import before relative imports
 
+import { AppointmentForm } from "./forms/AppointmentForm"; // Move this relative import after absolute imports
 
 
 import "react-datepicker/dist/react-datepicker.css";
