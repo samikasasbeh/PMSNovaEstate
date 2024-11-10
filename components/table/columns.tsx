@@ -3,12 +3,12 @@
 import { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
 
-import { Appointment } from "@/types/appwrite.types"; // Move this import before relative imports
 import { Doctors } from "@/constants";
-import { formatDateTime } from "@/lib/utils";
+import { formatDateTime } from "@/lib/utils"; // Ensure this comes before types
+import { Appointment } from "@/types/appwrite.types"; // Move this after utils
 
-import { AppointmentModal } from "../AppointmentModal"; // Move after absolute imports
-import { StatusBadge } from "../StatusBadge"; // Move after absolute imports
+import { AppointmentModal } from "../AppointmentModal";
+import { StatusBadge } from "../StatusBadge";
 
 
 export const columns: ColumnDef<Appointment>[] = [

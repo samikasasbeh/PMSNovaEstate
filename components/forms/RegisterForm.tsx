@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -9,27 +7,27 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import CustomFormField, { FormFieldType } from "../CustomFormField";
-import { FileUploader } from "../FileUploader";
-import SubmitButton from "../SubmitButton";
-
+// Absolute imports
 import { Form, FormControl } from "@/components/ui/form";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SelectItem } from "@/components/ui/select";
-
 import {
   Doctors,
   GenderOptions,
   IdentificationTypes,
   PatientFormDefaultValues,
-} from "@/constants"; // Move this import above the next one
-import { registerPatient } from "@/lib/actions/patient.actions"; // Place after "@/constants"
-import { PatientFormValidation } from "@/lib/validation";
+} from "@/constants";
+import { registerPatient } from "@/lib/actions/patient.actions";
+import { PatientFormValidation } from "@/lib/validation"; // Make sure this comes before relative imports
+
+// Relative imports
+import CustomFormField, { FormFieldType } from "../CustomFormField";
+import { FileUploader } from "../FileUploader";
+import SubmitButton from "../SubmitButton";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "react-phone-number-input/style.css";
-
 
 const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
